@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - PESCI MasterDraw</title>
+    <link rel='stylesheet' href='/css/style.css'>
+</head>
+<body>
+    <h1>Submitted Entries</h1>
+    <ul>
+        <% entries.forEach(entry => { %>
+            <li><strong><%= entry.name %></strong> (<%= entry.email %>) - <%= entry.answer %> <em>@ <%= entry.submittedAt.toLocaleString() %></em></li>
+        <% }) %>
+    </ul>
+</body>
+</html>
