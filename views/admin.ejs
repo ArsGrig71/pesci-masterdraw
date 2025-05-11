@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - PESCI MasterDraw</title>
+</head>
+<body>
+  <h1>Submitted Entries</h1>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Answer</th>
+      <th>Submitted At</th>
+    </tr>
+    <% entries.forEach(function(entry) { %>
+      <tr>
+        <td><%= entry.name %></td>
+        <td><%= entry.email %></td>
+        <td><%= entry.answer %></td>
+        <td><%= new Date(entry.submittedAt).toLocaleString() %></td>
+      </tr>
+    <% }); %>
+  </table>
+  <br>
+  <a href="/">Return to homepage</a>
+</body>
+</html>
